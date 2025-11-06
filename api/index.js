@@ -221,4 +221,5 @@ app.use((req, res) => {
 });
 
 // IMPORTANT FOR VERCEL
-module.exports = serverless(app);
+module.exports = app;
+module.exports.handler = serverless(app);
